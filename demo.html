@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faibl AdBlocker detection - Example</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+
+  <div class="page-header">
+    <h1>Faibl AdBlocker detection <small>Example</small></h1>
+  </div>
+  <p class="lead">An alert message with your AdBlocker status should be displayed.</p>
+
+  <div class="alert alert-info">
+    Please note that if you try this example on your own servers, you need to clone the related <a target="_blank" href="https://github.com/FaiblUG/faibl_adblocker_detector">git repository</a> and might need to adjust the <b>urlRoot setting</b> to match the location of the cloned repository
+  </div>
+
+  <h2>The example code</h2>
+  <pre>&lt;script&gt;
+  (function(config) {
+    var id='faibl_adblock_detector', d = document, js, fjs = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement('script'); js.id = id; js.src = config.urlRoot+'js/detector.min.js';
+    js.onload = function() { faiblAdBlockDetector.initialize(config) };
+    fjs.parentNode.insertBefore(js, fjs);
+  })({
+    urlRoot: '/faibl_adblocker_detector/',
+    callback: function(adBlockerEnabled) {
+      window.alert('AdBlockerEnabled: ' + (adBlockerEnabled ? 'yes' : 'no'));
+    }
+  });
+&lt;/script&gt;</pre>
+</div>
+
+
+</body>
+</html>
