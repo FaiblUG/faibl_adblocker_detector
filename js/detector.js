@@ -12,8 +12,7 @@ window.faiblAdBlockDetector = (function(window, document) {
 
   /*************** PRIVATE SCOPE ************************/
 
-  var isInitialized,
-      config;
+  var config;
 
   function initialize(_config) {
     config = _config;
@@ -54,7 +53,7 @@ window.faiblAdBlockDetector = (function(window, document) {
       $body = document.getElementsByTagName('body')[0];
 
       if (!$body) {
-        testViaScript(callback);
+        detectViaScript(callback);
 
         return;
       }
