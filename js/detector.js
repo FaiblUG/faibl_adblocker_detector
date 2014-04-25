@@ -105,7 +105,7 @@ window.faiblAdBlockDetector = (function(window, document) {
    * is not supported by the viewing browser or if the "testDomStyle" result is ambigous.
    */
   function detectViaScript(callback) {
-    var testUrl = config.urlRoot+'advertisement.js?http%3A%2F%2Fad.de.doubleclick.net%2Fadj%2F';
+    var testUrl = config.urlRoot+'js/advertisement.js?http%3A%2F%2Fad.de.doubleclick.net%2Fadj%2F';
     var head = document.getElementsByTagName("head")[0];
     var $script = document.createElement('script');
 
