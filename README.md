@@ -11,6 +11,9 @@ Clone the repository within a folder of your website that is reachable via http:
 
     git clone https://github.com/FaiblUG/faibl_adblocker_detector.git
 
+Or just run from your project root:
+
+    bower install faibl_adblocker_detector
 
 Usage
 -----
