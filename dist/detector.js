@@ -1,4 +1,14 @@
-window.faiblAdBlockDetector = (function(window, document) {
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+      define([], factory);
+  } else if (typeof exports === 'object') {
+      module.exports = factory();
+  } else {
+    // Browser globals (root is window)
+    root.faiblAdBlockDetector = factory();
+  }
+}(this, function () {
+
   'use strict';
 
 
@@ -105,7 +115,7 @@ window.faiblAdBlockDetector = (function(window, document) {
    * is not supported by the viewing browser or if the "testDomStyle" result is ambigous.
    */
   function detectViaScript(callback) {
-    var testUrl = config.urlRoot+'js/advertisement.js?http%3A%2F%2Fad.de.doubleclick.net%2Fadj%2F';
+    var testUrl = config.urlRoot+'dist/advertisement.js?http%3A%2F%2Fad.de.doubleclick.net%2Fadj%2F';
     var head = document.getElementsByTagName("head")[0];
     var $script = document.createElement('script');
 
@@ -120,4 +130,4 @@ window.faiblAdBlockDetector = (function(window, document) {
   }
 
   return that;
-})(window, document);
+}));

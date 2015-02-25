@@ -38,7 +38,7 @@
   (function(config) {
     var id='faibl_adblock_detector', d = document, js, fjs = d.getElementsByTagName('script')[0];
     if (d.getElementById(id)) return;
-    js = d.createElement('script'); js.id = id; js.src = config.urlRoot+'js/detector.min.js';
+    js = d.createElement('script'); js.id = id; js.src = config.urlRoot+'dist/detector-min.js';
     js.onload = function() { faiblAdBlockDetector.initialize(config) };
     fjs.parentNode.insertBefore(js, fjs);
   })({

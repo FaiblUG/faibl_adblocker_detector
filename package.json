@@ -1,0 +1,24 @@
+{
+  "name": "faibl-adblocker-detector",
+  "version": "1.1.0",
+  "description": "Simple AdBlocker detection script",
+  "main": "dist/detector-min.js",
+  "keywords": [
+    "adblocker",
+    "ad blocker",
+    "detection",
+    "detector"
+  ],
+  "devDependencies": {
+    "gulp": "~3.8",
+    "del": "~1.1",
+    "gulp-uglify": "~1.0",
+    "gulp-rename": "~1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FaiblUG/faibl_adblocker_detector"
+  },
+  "author": "Jonas Fischer-Maeck",
+  "license": "MIT"
+}

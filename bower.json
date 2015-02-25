@@ -1,14 +1,20 @@
 {
   "name": "faibl_adblocker_detector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "http://www.faibl.org",
-  "description": "AdBlocker detection script used by faibl.org",
-  "main": "js/detector.js",
-  "moduleType": [
-    "es6"
-  ],
+  "description": "Simple AdBlocker detection script",
+  "main": "dist/detector-min.js",
+  "ignore": [
+    ".gitignore",
+    ".idea",
+    "package.json",
+    "gulpfile.js",
+    "bower.json"
+  ]
   "keywords": [
     "adblocker",
+    "ad blocker",
+    "detection",
     "detector"
   ],
   "authors": [
